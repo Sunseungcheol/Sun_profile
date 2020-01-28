@@ -56,16 +56,18 @@ main>.cont1>.main-paint{
 main>.cont1>.main-paint img{
   display: none;
 }
-
+main>.cont2>.photo{
+  height: 300px;
+}
   main>.cont2>.photo img{
-    left: 25%;
-   
+    left: 15%;
+
   }
   main>.cont2>.photo img:nth-child(1){
-    width: 230px;
+    width: 210px;
   }
   main>.cont2>.photo img:nth-child(2){
-    width: 230px;
+    width: 210px;
   }
  
   main>.cont2>.profile{
