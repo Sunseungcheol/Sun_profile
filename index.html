@@ -2,155 +2,180 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>안녕하세요. 웹퍼블리셔를 지원한 선승철입니다.</title>
-    <link rel="stylesheet" href="css/jInvertScroll.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/favicon.ico">
- 
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/clock.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/function.js"></script>
+    <title>선승철 프로필 사이트</title>
 </head>
-<body>
-    <div class="header">
-       
-    </div>
-   <div class="horizon scroll">
-        <img src="images/hori_4.png" alt="" />
-    </div>
-    <div class="middle scroll">
-        <img src="images/mid.png" alt="" />
-    </div>
-    <div class="front scroll">
-
-        <div class="section section1">
+<body onload="printClock()">
+    <header>
+        <nav>
+            <ul class="gnb clearfix">
+                <li class="on"><a href="javascript:void(0)">MAIN</a></li>
+                <li><a href="javascript:void(0)">ABOUT</a></li>
+                <li><a href="javascript:void(0)">PORTFOLIO</a></li>
+                <li><a href="javascript:void(0)">ART</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="cont cont1">
             <h1>선승철</h1>
-        </div>
-        <div class="section section2">
-            <h2>이름 : 선승철</h2>
-            <p> 생년월일 : 93. 11. 09</p>
-            <address>주소 : 서울시 은평구</address>
-            <p> 연락처 : 010-4424-4411</p>
-            <p> 이메일 : vsoghlv@naver.com</p>
-        </div>
-        <div class="section section3">
-            <h3>자격증</h3>
-            <p>GTQ 포토샵 1급</p>
-            <p>운전면허 1종보통</p>
-           
-        </div>
-        <div class="section section3_1">
-            <h3>교육</h3>
-            <p>이젠아카데미 모바일 앱디자인 <br>& 하이브리드앱 과정
-                720시간 수료
-             </p>
-        </div>
-        <div class="section section4">
-            <h3 class="sr-only">portfolio</h3>
-            <div class="portfolio port-1">
-                <div class="img">
-                    <img src="images/clean-aid.jpg" alt="크린에이드 포트폴리오">  <p>19.12월 제작</p>
-                    <div class="port-text">
-                        <a href="https://sunseungcheol.github.io/Sun_portfolio2/index.html" target="_blank">
-                        <p>Main-page, 다양한 유형의 슬라이드</p>
-                        <div class="heading">
-                        <h4><span> 크린에이드</span></h4>
+            <div class="main-paint">
+                <img class="paint1" src="images/paint1.png" alt="">
+                <img class="paint2" src="images/paint2.png" alt="">
+                <img class="paint3" src="images/paint3-1.png" alt="">
+                <img class="paint4" src="images/paint4.png" alt="">
+            </div>
+        </section>
+        <section class="cont cont2">
+            <h2>ABOUT</h2>
+            <div class="photo">
+                <!-- <h3>선승철</h3> -->
+                <img class="squre1" src="images/sercle.png" alt="">
+                <img class="squre2" src="images/sercle2.png" alt="">
+            </div>
+            <div class="profile">
+                
+                <div class="prfofile-sub">
+                    <h4 class="wow fadeInUp" data-wow-delay="150ms">Profile</h4>
+                    <p class="wow fadeInUp" data-wow-delay="250ms">선승철 Sunseungcheol</p>
+                    <p class="wow fadeInUp" data-wow-delay="300ms">1993.11.09</p>
+                    <p class="wow fadeInUp" data-wow-delay="350ms">Eunpyeong-gu, Seoul, Republic of Korea</p>
+                    <p class="wow fadeInUp" data-wow-delay="400ms">010-4424-4411</p>
+                    <p class="wow fadeInUp" data-wow-delay="450ms">vsoghlv@naver.com</p>
+                    <br>
+                    <p class="wow fadeInUp" data-wow-delay="500ms">고등학교 졸업 학력 검정고시</p>
+                    <p class="wow fadeInUp" data-wow-delay="550ms">이젠 아카데미 모바일 앱디자인(웹디자인) & 하이브리드앱 수료</p>
+                </div>
+                <br>
+                <div class="license">
+                    <h4 class="wow fadeInUp" data-wow-delay="600ms">License</h4>
+                    <p class="wow fadeInUp" data-wow-delay="650ms">GTQ 포토샵 1급</p>
+                    <p class="wow fadeInUp" data-wow-delay="700ms">운전면허 1종 보통</p>
+                    <br>
+                    <p class="wow fadeInUp" data-wow-delay="750ms">학원 수료 후 스터디, 유튜브 그리고 책을 구매하여 실력을 키우기 위해 더욱 노력하고 있습니다. <br>
+                    답이 나오지 않으면 답이 나올 때 까지 밤을 새서라도 찾아내는 성격입니다. <br>
+                    아직은 미숙한 점이 없지 않겠으나 항상 겸허한 자세로 업무를 숙지하고 부단히 배워나가며  <br>
+                    구성원들과 원만한 관계를 만들어 나갈 자신이 있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="cont cont3 clearfix">
+            <h2>PORTFOLIO</h2>
+            <div class="clearfix">
+            <div class="port">
+                    <div class="portfolio port-1">
+                    <div class="img">
+                        <img src="images/clean-aid.jpg" alt="크린에이드 포트폴리오">  <p>19.12월 제작</p>
+                        <div class="port-text">
+                            <a href="https://sunseungcheol.github.io/Sun_portfolio2/index.html" target="_blank">
+                            <p>Main-page, 다양한 유형의 슬라이드</p>
+                            <div class="heading">
+                            <h4><span> 크린에이드</span></h4>
+                            </div>
+                            </a>
                         </div>
-                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="section section5">
-            <h3 class="sr-only">portfolio</h3>
-            <div class="portfolio port-2">
-                <div class="img">
-                    <img src="images/bslense.jpg" alt="bslense 포트폴리오"><p>19.11월 제작</p>
-                    <div class="port-text">
-                        <a href="https://sunseungcheol.github.io/Sun_portfolio_1/" target="_blank">
-                        <p>
-                        반응형, 서브페이지 모두 구현, css 구조화</p>
-                        <div class="heading">
-                            <h4><span>BS-lense</span></h4>
+            <div class="port">
+                <div class="portfolio port-2">
+                    <div class="img">
+                        <img src="images/bslense.jpg" alt="bslense 포트폴리오"><p>19.11월 제작</p>
+                        <div class="port-text">
+                            <a href="https://sunseungcheol.github.io/Sun_portfolio_1/" target="_blank">
+                            <p>
+                            반응형, 서브페이지 모두 구현, css 구조화</p>
+                            <div class="heading">
+                                <h4><span>BS-lense</span></h4>
+                            </div>
+                        </a>
                         </div>
-                    </a>
+                    </div>
+               </div>
+            </div>
+            <div class="port">
+                <div class="portfolio port-3">
+                    <div class="img">
+                        <img src="images/cats.jpg" alt="고양이 원페이지 포트폴리오"><p>19.09월 제작</p>
+                        <div class="port-text">                        
+                            <a href="https://sunseungcheol.github.io/Sun_portfolio_onepage/" target="_blank">
+                            <p>
+                                원페이지, 디자인위주
+                            </p>
+                            <div class="heading">
+                                <h4><span>고양이 원페이지</span></h4>
+                            </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="port">
+                <div class="portfolio port-4">
+                    <div class="img">
+                        <img src="images/flat.jpg" alt="스포츠 센터 flat icon"><p>19.08월 제작</p>
+                        <div class="port-text">                        
+                
+                            <p>
+                                스포츠 센터 flat icon
+                            </p>
+                            <div class="heading">
+                                <h4><span>flat icon</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="port">
+                <div class="portfolio port-5">
+                    <div class="img">
+                        <img src="images/preparing.png" alt="준비중">                  
+                          <div class="port-text">                        
+                            <a href="javascript:void(0)">
+                            <p>
+                               준비중입니다.
+                            </p>
+                            <div class="heading">
+                                <h4><span>준비중</span></h4>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        </section>
+        <section class="cont cont4">
+            <h2>ART</h2>
+           <div class="arts clearfix">
+               <img src="images/art/art-1.jpg" alt="">
+               <img src="images/art/art-2.jpg" alt="">
+               <img src="images/art/art-3.jpg" alt="">
+               <img src="images/art/art-4.jpg" alt="">
+               <img src="images/art/art-5.jpg" alt="">
+               <img src="images/art/art-6.jpg" alt="">
+               <img src="images/art/art-7.jpg" alt="">
+               <img src="images/art/art-8.jpg" alt="">
+               <img src="images/art/art-9.jpg" alt="">
+               <img src="images/art/art-7.jpg" alt="">
+               <img src="images/art/art-8.jpg" alt="">
+               <img src="images/art/art-9.jpg" alt="">
            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="clock">
         </div>
-        <div class="section section6">
-            <h3 class="sr-only">portfolio</h3>
-            <div class="portfolio port-3">
-                <div class="img">
-                    <img src="images/cats.jpg" alt="고양이 원페이지 포트폴리오"><p>19.09월 제작</p>
-                    <div class="port-text">                        
-                        <a href="https://sunseungcheol.github.io/Sun_portfolio_onepage/" target="_blank">
-                        <p>
-                            원페이지, 디자인위주
-                        </p>
-                        <div class="heading">
-                            <h4><span>고양이 원페이지</span></h4>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section section7">
-            <h3 class="sr-only">portfolio</h3>
-            <div class="portfolio port-4">
-                <div class="img">
-                    <img src="images/flat.jpg" alt="스포츠 센터 flat icon"><p>19.08월 제작</p>
-                    <div class="port-text">                        
-            
-                        <p>
-                            스포츠 센터 flat icon
-                        </p>
-                        <div class="heading">
-                            <h4><span>flat icon</span></h4>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section section8">
-            <h3 class="sr-only">portfolio</h3>
-            <div class="portfolio port-5">
-                <div class="img">
-                    <img src="images/preparing.png" alt="준비중">                  
-                      <div class="port-text">                        
-                        <a href="javascript:void(0)">
-                        <p>
-                           준비중입니다.
-                        </p>
-                        <div class="heading">
-                            <h4><span>준비중</span></h4>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-   <img src="images/front_3.png" alt="">
-    </div>
-    <div class="footer">
-        <p>이 페이지는 상업적목적이 아닌 개인 포트폴리오 목적의 페이지입니다.</p>
-    </div>
-    
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.jInvertScroll.js"></script>
-    <script type="text/javascript">
-    (function($) {
-        $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
-            {
-            height: 5500,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
-            onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
-                console.log(percent);
-            }
-        });
-    }(jQuery));
-
-
-    </script>
-</body>
+    </footer>
+    </body>
 </html>

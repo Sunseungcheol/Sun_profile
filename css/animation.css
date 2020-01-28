@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/* 애니메이션 */
+
+@keyframes sm1{
+    0%{ opacity: 0;}
+    100%{ opacity: 1;}
+    }
+    .paint1{
+		animation-name:sm1; animation-duration:1s;
+	    animation-direction:normal;
+		animation-fill-mode:both;
+	}
+@keyframes sm2{
+    0%{ opacity: 0;}
+    100%{ opacity: 1;}
+    }
+    .paint2{
+		animation-name:sm2; animation-duration:2s;
+	    animation-direction:normal;
+        animation-fill-mode:both;
+        animation-delay:0.5s;
+	}
+@keyframes sm3{
+    0%{ opacity: 0;}
+    100%{ opacity: 1;}
+    }
+    .paint3{
+		animation-name:sm3; animation-duration:3s;
+	    animation-direction:normal;
+        animation-fill-mode:both;
+        animation-delay:1s;
+	}
+@keyframes sm4{
+    0%{ opacity: 0;}
+    100%{ opacity: 1;}
+    }
+    .paint4{
+		animation-name:sm4; animation-duration:2s;
+	    animation-direction:normal;
+        animation-fill-mode:both;
+        animation-delay:1.5s;
+	}
+
+  /* ----- */
+  @keyframes sm5{
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+    }
+    .squre1{
+		animation-name:sm5; animation-duration:2s;
+	    animation-direction:normal;
+    animation-fill-mode:both;
+    animation-iteration-count:infinite;
+	}
+@keyframes sm6{
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+    }
+    .squre2{
+		animation-name:sm6; animation-duration:4s;
+	    animation-direction:normal;
+    animation-fill-mode:both;
+    animation-iteration-count:infinite;
+	}
