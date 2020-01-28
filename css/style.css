@@ -1,13 +1,15 @@
 @charset "utf-8";
 
 body{
-     min-width: 320px;
+  width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
     font-size: 14px;
     font-family: 'Noto Sans', sans-serif;
     overflow-x: hidden!important;
     /* background-color: rgb(252, 242, 230); */
 }
+
 /* 페이지네이션 */
 nav>.gnb{
   position: fixed;
@@ -464,15 +466,24 @@ main>.cont4>.arts img{
   }
 }
   
-  @media screen and (min-width: 320px) and (max-width: 480px){
-  
+
+
+  @media all and (max-width: 480px){
+    main{
+      width: 320px;
+      margin: 0 auto;
+    }
+   main>.cont{
+     left: 50%;
+     transform: translateX(-50%);
+   }
     nav>.gnb{
       width: 300px;
     }
     main>.cont{
       width: 320px;
-
       height: 1200px;
+ 
     }
     main>.cont h2{
       padding-left: 0;
@@ -493,22 +504,16 @@ main>.cont>h1{
 }
 
 main>.cont1{
+  width: 320px;
   margin: 0 auto;
   height: 700px;
 }
+main>.cont1>.main-paint img{
+  width: 320px;
+  overflow: hidden;
 
-main>.cont1>.main-paint img:nth-child(2){
-  left: 70%;
 }
-main>.cont1>.main-paint img:nth-child(3){
-  top: 250px;
-  left: 42%;
-}
-main>.cont1>.main-paint img:nth-child(4){
 
-  left: 40%;
-  top: 50px;
-}
 
   main>.cont2>.photo img{
     left: 25%;
@@ -520,16 +525,21 @@ main>.cont1>.main-paint img:nth-child(4){
   main>.cont2>.photo img:nth-child(2){
     width: 230px;
   }
+  main>.cont2>.photo img:nth-child(3){
+    width: 230px;
+  }
   main>.cont2>.profile{
     top: 500px;
     left: 5%;
   }
-  main>.cont3>div{
-    width: 270px;
-  }
   main>.cont3{
     height: 1700px;
   }
+  main>.cont3>div{
+    width: 270px;
+   
+  }
+
   main>.cont3>div>.port{
     margin-right: 0;
     float: none;
@@ -555,5 +565,6 @@ main>.cont1>.main-paint img:nth-child(4){
     margin-top: 30px;
     font-size: 35px;
   }
+  
 
 }
