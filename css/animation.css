@@ -58,8 +58,19 @@
     100%{ transform: rotate(360deg);}
     }
     .squre2{
-		animation-name:sm6; animation-duration:4s;
+		animation-name:sm6; animation-duration:3s;
 	    animation-direction:normal;
     animation-fill-mode:both;
     animation-iteration-count:infinite;
+  }
+  @keyframes sm7{
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+    }
+    .squre3{
+		animation-name:sm7; animation-duration:8s;
+	    animation-direction:normal;
+    animation-fill-mode:both;
+    animation-iteration-count:infinite;
+
 	}

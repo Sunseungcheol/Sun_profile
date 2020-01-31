@@ -5,7 +5,7 @@ nav>.gnb{
     top: 5px;
     left: 25%;
     transform: translateX(-25%);
-    z-index: 999;
+    z-index: 99999;
     font-weight: 800;
   }
 main{
@@ -48,27 +48,23 @@ main>.cont1{
   height: 700px;
 }
 main>.cont1>.main-paint{
-    width: 320px;
-    overflow: hidden;
+
+    display: none;
 
 }
 
-main>.cont1>.main-paint img{
-  display: none;
-}
-main>.cont2>.photo{
-  height: 300px;
-}
+
+
   main>.cont2>.photo img{
-    left: 15%;
+    left: 25%;
+    width: 230px;
+  }
 
-  }
   main>.cont2>.photo img:nth-child(1){
-    width: 210px;
+    left: 23%;
+    width: 250px;
   }
-  main>.cont2>.photo img:nth-child(2){
-    width: 210px;
-  }
+  
  
   main>.cont2>.profile{
     top: 500px;
@@ -107,5 +103,10 @@ main>.cont2>.photo{
     margin-top: 30px;
     font-size: 35px;
   }
-  
+  .day{
+    font-size: 17px!important;
+  }
 
+  .ampm{
+    font-size: 20px!important;
+  }
