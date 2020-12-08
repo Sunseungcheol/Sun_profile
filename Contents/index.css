@@ -1,0 +1,389 @@
+﻿@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Codystar:300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Vibur");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap");
+
+#gnb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Oswald;
+  font-size: 9rem;
+  text-align: left;
+  /* letter-spacing: 15px; */
+  line-height: 1.2em;
+  font-weight: 400;
+  color: #e3e89c !important;
+  transition: ease-in-out 1s;
+  /* text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444,
+    0 0 0.1em #ff4444, 0 10px 3px #000; */
+}
+.gnbMenu {
+  opacity: 0;
+  font-size: 20px;
+  transition: ease-in-out 0.8s;
+}
+.gnbMenu li {
+  position: relative;
+  float: left;
+  padding: 5px;
+  margin: 0 20px;
+}
+.gnbMenu li span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  width: 0px;
+  height: 1px;
+  background-color: #e4cfea;
+  transition: all 0.3s;
+}
+.gnbMenu li:hover {
+  color: #e4cfea;
+}
+.gnbMenu li:hover span {
+  width: 100%;
+}
+/* .openDoor #doorText span {
+  animation: blink linear infinite 2s;
+}
+
+.openDoor h1 span:nth-of-type(2) {
+  animation: blink linear infinite 3s;
+}
+.goPortfolioBtn {
+  position: absolute;
+  display: none;
+  bottom: 10%;
+  right: 10%;
+  padding: 15px;
+  border: 3px solid #ff3344;
+  color: #fdc8c8;
+  text-shadow: 5px 3px 4px #ceaaaa;
+  box-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444,
+    0 0 0.1em #ff4444, 0 10px 3px #000;
+} */
+.wrap #gnb.doorTextAni {
+  top: 10%;
+  transform: translate(-50%, 0);
+  font-size: 20px;
+  opacity: 1 !important;
+  transition: none !important;
+}
+.portfolioBoxWrap {
+  overflow: hidden;
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.portTextBox {
+  position: absolute;
+  max-width: 45%;
+  height: 100%;
+  right: 0;
+  top: 0px;
+  text-align: right;
+}
+.portTitleText {
+  color: #d8f1f7;
+  font-size: 3.5rem;
+  line-height: 1.2em;
+  margin-bottom: 25px;
+}
+.portInfoText {
+  color: #442c65;
+  font-size: 1rem;
+  line-height: 1.8em;
+  text-align: justify;
+}
+.portNumBox {
+  overflow: hidden;
+  position: absolute;
+  height: 80px;
+  top: 0;
+  left: 20px;
+  z-index: 3;
+}
+.portNumStyle {
+  font-size: 5rem;
+
+  color: #9deafd;
+}
+/* 슬라이드 */
+.portSlideBox {
+  position: relative;
+  top: 0;
+  left: 0px;
+  transition: all 1s;
+}
+.slideControlBtn {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.2s;
+  text-indent: -9999em;
+  z-index: 10;
+}
+.slideControlBtn:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prevBtn {
+  background-image: url(../img/prevBtn.png);
+  left: 8%;
+}
+.nextBtn {
+  background-image: url(../img/nextBtn.png);
+  right: 8%;
+}
+.portImg {
+  position: relative;
+  width: 50%;
+  height: 500px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #5fb8c2;
+  background-clip: content-box;
+}
+/* .portfolioBox:hover .portImg {
+  background-image: url(../img/pionMW.png);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+/* .portfolioBox:hover .portImgText {
+  opacity: 0;
+} */
+.portImgText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* color: #1376be; */
+  color: #fff;
+  font-size: 120px;
+  font-weight: bold;
+  line-height: 1.2em;
+}
+.mainPortSubBox {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+.fontTitleSubIndex {
+  font-size: 18px;
+  line-height: 1.5em;
+  color: #d8f1f7;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.fontTitleSubIndex li {
+  float: left;
+  margin: 10px;
+}
+.fontTitleSubIndex li:last-child {
+  margin-right: 0;
+}
+
+.portfolioBox {
+  float: left;
+  max-width: 1000px;
+  margin: 0 50px;
+}
+/* ------------------ */
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79% {
+    color: #333;
+  }
+  80% {
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+/* 반응형 */
+@media all and (max-width: 1500px) {
+  .portfolioBoxWrap {
+    max-width: 1000px;
+  }
+  .slideControlBtn {
+    width: 70px;
+    height: 70px;
+  }
+  .nextBtn {
+    right: 1%;
+  }
+
+  .prevBtn {
+    left: 1%;
+  }
+  .portfolioBox {
+    max-width: 900px;
+  }
+}
+
+/* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/
+@media all and (max-width: 1023px) {
+  .portfolioBoxWrap {
+    max-width: 800px;
+  }
+  .slideControlBtn {
+    width: 50px;
+    height: 50px;
+  }
+  .portfolioBox {
+    max-width: 700px;
+  }
+  .fontTitleSubIndex {
+    font-size: 15px;
+    line-height: 1.2em;
+    letter-spacing: 1px;
+  }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (max-height: 550px) {
+  .mainControl {
+    margin-top: 50px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .welcomeText {
+    font-size: 5rem;
+  }
+  .centerBelt {
+    top: 45.7% !important;
+  }
+  .mainPortfolio {
+    top: 45% !important;
+  }
+  .gnbMenu {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .portfolioBoxWrap {
+    max-width: 580px;
+  }
+  .slideControlBtn {
+    width: 40px;
+    height: 40px;
+  }
+  .portfolioBox {
+    max-width: 480px;
+  }
+  .fontTitleSubIndex {
+    display: none;
+  }
+  .portImg {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .webBtnBox {
+    display: none;
+  }
+  .mobileBtnBox {
+    display: block;
+  }
+  .portInfoText {
+    display: none;
+  }
+  .portTextBox {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    right: -40px;
+    top: 2px;
+  }
+  .portTitleText {
+    padding-top: 7px;
+    color: #599bad;
+  }
+  .portNumStyle {
+    color: #599bad;
+  }
+  .btn_white {
+    border: 1px solid #5fb8c2;
+  }
+}
+
+@media all and (max-width: 600px) {
+  /*스타일입력*/
+  .centerBelt {
+    top: 54% !important;
+  }
+  .mainPortfolio {
+    top: 60% !important;
+  }
+  .gnbMenu {
+    font-size: 16px;
+  }
+  .gnbMenu li {
+    margin: 0px 7px;
+  }
+  .portfolioBoxWrap {
+    max-width: 414px;
+  }
+  .portfolioBox {
+    max-width: 314px;
+  }
+  .fontTitleSubIndex {
+    display: none;
+  }
+  .portImg {
+    width: 100%;
+    height: 360px;
+  }
+  .btnL {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+  .portTitleText {
+    font-size: 2.5rem;
+  }
+  .wrap #gnb.doorTextAni {
+    width: 100%;
+  }
+  .slideControlBtn {
+    top: 40%;
+  }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width: 479px) {
+  /*스타일입력*/
+}

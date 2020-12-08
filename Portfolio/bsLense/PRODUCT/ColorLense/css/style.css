@@ -1,0 +1,296 @@
+@charset "utf-8";
+
+
+/*  main*/
+
+main>.main-header{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+main>.main-header>.main-img{
+    width: 100%;
+}
+main>.main-header>.main-img>ul>li>.sub-bg{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    
+}
+
+main>.main-header>.scrolldown{
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -30px;
+    max-width: 100%;
+}
+   
+main>.main-header>.scrolldown>.arrow{
+    border: 0;
+    vertical-align: top;
+    max-width: 100%;
+    display: block;
+    max-width: 100%;
+}
+main>.main-section{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 탭부분 */
+main>.main-section>.tap{
+
+    margin-top: 50px;
+    text-align: center;
+}
+main>.main-section>.tap>.sub-tap>ul{
+    width: 100%;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+main>.main-section>.tap>.sub-tap>ul>li{
+    float: left;
+    width: 25%;
+    height: 100%;
+    margin: 0;
+    padding: 20px 0;
+    font-weight: 500;
+    line-height: 20px;
+}
+main>.main-section>.tap>.sub-tap>ul>li:first-child{
+    
+    background-color: #cfa3c6;
+ 
+}
+main>.main-section>.tap>.sub-tap>ul>li:first-child>a{
+    color: #fff;
+}
+main>.main-section>.tap>.sub-tap>ul>li:hover{
+    background-color: #cfa3c6;
+    
+}
+main>.main-section>.tap>.sub-tap>ul>li:hover>a{
+    color:#fff;
+}
+main>.main-section>.tap>.sub-tap>ul>li>a{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 17px;
+    height: 20px;
+    line-height: 20px;
+    border-right: 1px solid #ddd;
+    color:#666;
+}
+
+/* 탭 서브부분  */
+
+main>.main-section>.tap>.depth-tap{
+    
+    text-align: left;
+    border-bottom:1px solid #ddd;
+}
+main>.main-section>.tap>.depth-tap>ul>li{
+    margin: 15px 10px;
+    float: left;
+
+}
+
+main>.main-section>.tap>.depth-tap>ul>li:first-child::before{
+    background: none;
+}
+main>.main-section>.tap>.depth-tap>ul>li:first-child>a{
+    
+    color: #834e78;
+}
+main>.main-section>.tap>.depth-tap>ul>li::before{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: #ccc;
+    left: 0;
+}
+main>.main-section>.tap>.depth-tap>ul>li>a{
+    padding-left: 20px;
+    color:#666;
+}
+
+/* 렌즈부분 */
+main>.main-section>.lense{
+    
+    padding: 50px 0 20px 0 ;
+ }
+ 
+ main>.main-section>.lense>.lense-img{
+     
+   
+ 
+     float: left;
+     width: 16.66%;
+     margin-bottom: 10px;
+     text-align: center;
+ }
+ 
+ main>.main-section>.lense>.lense-img>.lensebord{
+     position: relative;
+     width: 100%;
+     height: 100px;
+     padding: 15px 0;
+     border: 1px solid #ddd;
+ 
+ 
+     
+ }
+ main>.main-section>.lense>.lense-img>.lensebord>img{
+ 
+     position: relative;
+     z-index:-1;
+     top: 50%;
+     transform: translate(0,-50%);
+     width: 100px;
+     max-width: 100%;
+     margin: 0 auto;    
+ }
+ 
+ main>.main-section>.lense>.lense-img:hover>.lensebord{
+     background-image: url(../images/item-hover.png);
+ }
+ 
+ main>.main-section>.lense>.lense-img:hover>.lense-text>p{
+     color: #834e78;
+     font-weight: 600;
+ }
+ 
+ main>.main-section>.lense>.lense-img>.lense-text>p{
+     font-size: 18px;
+     padding: 5px 0;
+     font-weight: 300;
+     line-height: 1.2;
+ }
+ 
+ /* 페이지 및 검색 */
+
+ main>.main-footer>.pagenav{
+     margin-top: 20px;
+     text-align: center;
+ }
+ main>.main-footer>.pagenav>ul>li{
+     display: inline-block;
+ }
+ main>.main-footer>.pagenav>ul>li>a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #666;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url(../images/paging.png);
+   
+ }
+ main>.main-footer>.pagenav>ul>li:first-child>a{
+    background-image: url(../images/prev-first.png);
+    text-indent: -9999px;
+ }
+ main>.main-footer>.pagenav>ul>li:last-child>a{
+    background-image: url(../images/next-last.png);
+    text-indent: -9999px;
+ }
+
+ main>.main-footer>.serch{
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #ededed;
+ }
+main>.main-footer>.serch .serch-input{
+    padding: 0 5px;
+    width: 33%;
+    height: 30px;
+    line-height: 30px;
+
+}
+main>.main-footer>.serch .serch-btn{
+    width: 68px;
+    color: #fff;
+    height: 30px;
+    background-color: #555555;
+    border: solid 1px #555;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 30px;
+ 
+}
+
+
+
+/* 반응형 */
+@media screen and (max-width: 1199px){
+
+main>.main-section{
+    width: 100%;
+}
+main>.main-header>.scrolldown{
+    bottom: 5px;
+    margin-left: -20px;
+}
+main>.main-header>.scrolldown>.arrow{
+    width: 40px;
+}
+
+}
+
+@media (max-width: 640px){
+
+main>.main-header>.scrolldown{
+    bottom: 5px;
+        
+    margin-left: -15px;
+}
+main>.main-header>.scrolldown>.arrow{
+    width: 30px;
+}
+main>.main-section{
+   margin: 0 1%;
+}
+main>.main-section>.lense>.lense-img>.lense-text>p{
+    font-size: 16px;
+}
+
+main>.main-section>.lense>.lense-img{
+    width: 25%;
+}
+main>.main-section>.lense>.lense-img>.lense-text>p{
+    font-size: 13px;
+}
+main>.main-section>.tap>.sub-tap>ul>li{
+
+    padding: 15px 0;
+    font-weight: 500;
+    line-height: 20px;
+}
+main>.main-section>.tap>.sub-tap>ul>li>a{
+    font-size: 15px;
+}
+main>.main-section>.tap>.depth-tap>ul>li{
+    margin: 10px 10px;
+
+
+}
+main>.main-section>.tap>.depth-tap>ul>li>a{
+    font-size: 14px;
+}
+}
+
+
+
+

@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+
+/*  main*/
+
+/* 제품정보부분 */
+main>.main-section{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main>.main-section>.item>.itemsub{
+    padding: 40px 0;
+}
+main>.main-section>.item>.itemsub>.item-table{
+ 
+    width: 96%;
+    margin:0 2%;
+    
+}
+main>.main-section>.item>.itemsub>.item-table .table-width{
+    width: 20%;
+}
+main>.main-section>.item>.itemsub>.item-table>.table-text{
+    font-size: 30px;
+    color: #834e78;
+    font-weight: 500;
+}
+main>.main-section>.item>.itemsub>.item-table>table{
+    width: 100%;
+    text-align: center;
+    border-bottom:1px solid #444;
+    box-sizing: border-box;
+}
+main>.main-section>.item>.itemsub>.item-table>table th{
+  
+    padding: 10px 8px;
+    color: #333;
+    border-top:2px solid #111;
+    border-bottom: 3px solid #444;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+main>.main-section>.item>.itemsub>.item-table>table tr td{
+    padding: 20px 8px;
+
+}
+main>.main-section>.item>.itemsub>.item-table>table tr td.table-text{
+    text-align: left;
+    vertical-align: top;
+}
+main>.main-section>.item>.itemsub>.item-table>table tr td span{
+    display: block; 
+    font-weight: 700;
+    color: #111;
+}
+
+/* 렌즈 설명 부분 */
+main>.main-footer{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0 70px 0;
+}
+main>.main-footer>.footer-text>h3{
+    color: #834e78;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 20px 0;
+    line-height: 1.4;
+    text-align: center;
+}
+main>.main-footer>.footer-text>h3::before,main>.main-footer>.footer-text>h3::after{
+    display: block;
+    margin: 0 auto;
+    content: "";
+    background: url(../images/tear_tit_bg.png);
+}
+main>.main-footer>.footer-text>h3::before{
+    width: 41px;
+    height: 28px;
+    background-position: 0 0;
+}
+main>.main-footer>.footer-text>h3::after{
+    width: 73px;
+    height: 36px;
+    background-position: 0 -28px;
+}
+
+main>.main-footer>.footer-text>ul>li{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+main>.main-footer>.footer-text>ul>li>.content-text{
+    margin-top: 20px;
+}
+
+
+
+
+
+
+/* 반응형 */
+@media screen and (max-width: 1199px){
+
+main>.main-section{
+    width: 100%;
+}
+main>.main-footer{
+    width: 100%;
+}
+}
+
+@media (max-width: 640px){
+
+main>.main-section>.item{
+    padding: 30px 0;
+}
+main>.main-section>.item>.itemsub{
+    padding: 20px 0;
+}
+main>.main-section>.item>.itemsub>.item-img{
+    width: 100%;
+   margin: 0 10px;
+   
+}
+main>.main-section>.item>.itemsub>.item-table{
+    width: 100%;
+    clear: both;
+}
+
+
+
+
+
+main>.main-section>.item>.itemsub>.item-table>.table-text{
+    font-size: 18px;
+}   
+main>.main-section>.item>.itemsub>.item-table>p{
+    font-size: 18px;
+}
+main>.main-section>.item>.itemsub>.item-table>table tr td{
+    padding: 10px 0;
+    font-size: 14px;
+}
+main>.main-footer{
+    padding: 20px 0 40px 0;
+}
+main>.main-footer>.footer-text>h3{
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+main>.main-footer>.footer-text>h3::before,main>.main-footer>.footer-text>h3::after{
+    background-size: 36.5px;
+}
+main>.main-footer>.footer-text>h3::before{
+    width: 20.5px;
+    height: 14px;
+    background-position: 0 0;
+}
+main>.main-footer>.footer-text>h3::after{
+    width: 36.5px;
+    height: 18px;
+    background-position: 0 -14px;
+}
+main>.main-footer>.footer-text>ul>li{
+    float: none;
+    width: 100%;
+    margin: 10px 0;
+}
+
+}

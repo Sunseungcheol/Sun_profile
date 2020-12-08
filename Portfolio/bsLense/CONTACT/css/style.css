@@ -1,0 +1,186 @@
+@charset "utf-8";
+main>.main-section{
+    max-width: 1200px;
+    margin: 60px auto;
+}
+main>.main-section>div{
+    float: left;
+    width: 48%;
+    margin: 0 1%;
+}
+main>.main-section>div h3{
+    color: #333;
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0 0 20px;
+
+}
+
+/* address */
+main>.main-section>.add>.add-sub>.add-text>address:first-child{
+    color: #834e78;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+main>.main-section>.add>.add-sub>.add-text>address:first-child::after{
+    content: "";
+    width: 30px;
+    margin-top: 20px;
+    background-color: #834e78;
+    height: 1px;
+    display: block;
+}
+
+main>.main-section>.add>.add-sub>.product{
+    margin-top: 20px;
+}
+main>.main-section>.add>.add-sub>.product>a{
+    display:inline-block;
+    text-align: center;
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 15px;
+    background-color: #666;
+    line-height: 1.5;
+    
+}
+
+
+/* contact us */
+main>.main-section>.contact>.contact-sub>table{
+    width: 100%;
+}
+main>.main-section>.contact>.contact-sub>table th{
+    display: block;
+    border-top: 0;
+    padding: 5px 5px;
+    text-align: left;
+    color: #666;
+    background-color: transparent;
+    font-weight: 300;
+}
+main>.main-section>.contact>.contact-sub>table td{
+    display: block;
+    
+}
+main>.main-section>.contact>.contact-sub>table td input{
+    background-color: #f6f6f6;
+    width: 100%;
+    height: 33px;
+    line-height: 33px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+
+}
+main>.main-section>.contact>.contact-sub>table td textarea{
+    background-color: #f6f6f6;
+    width: 100%;
+    min-height: 200px;
+    line-height: 33px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+}
+main>.main-section>.contact>.contact-sub>table th span{
+    color:red;
+    font-size: 0.8em;
+}
+main>.main-section>.contact>.contact-sub>table td.filetd{
+    position: relative;
+}
+main>.main-section>.contact>.contact-sub>table td span.filespan{
+    position: absolute;
+    display: block;
+    width: 90px;
+    height: 34px;
+    line-height: 34px;
+    color: #fff;
+    background: #999;
+    text-align: center;
+    top: 0;
+    right: -1px;
+    
+    cursor: pointer;
+}
+main>.main-section>.contact>.contact-sub>table td span.inputbar{
+    display: block;
+    background-color: #f6f6f6;
+    width: 100%;
+    height: 33px;
+    line-height: 33px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    text-indent: -99999px;
+}
+main>.main-section>.contact>.contact-sub>table td input.file{
+    width: 88px;
+    height: 31px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+main>.main-section>.contact>.contact-sub>.send{
+    margin-top: 30px;
+    text-align: center;
+}
+main>.main-section>.contact>.contact-sub>.send>a{
+    display: inline-block;
+    text-align: center;
+    padding: 10px 50px;
+    color: #fff;
+    font-size: 22px;
+    background-color: #cfa3c6;
+    border: 1px solid #cfa3c6;
+    line-height: 1.5;
+    cursor: pointer;
+}
+main>.main-section>.contact>.contact-sub>.send>a:hover{
+    color:#cfa3c6;
+    background-color: #fff;
+
+}
+main>.main-footer>.map>iframe{
+    width:100%; 
+    height:450px;
+    border:none;
+    
+}
+
+/* 반응형 */
+
+@media screen and (max-width: 1199px){
+    main>.main-section{
+        width: 100%;
+    }
+    main>.main-section>div h3{
+        font-size: 30px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 640px){
+    main>.main-section>div{
+        font: none;
+        width: 98%;
+        margin: 0 1%;
+    }
+    main>.main-section>.add{
+        margin-bottom: 70px;
+    }
+    main>.main-section>div h3{
+        font-size: 24px;
+    }
+
+    main>.main-section>.add>.add-sub>.add-text>address:first-child{
+        font-size: 18px;
+    }
+    main>.main-section>.add>.add-sub>.add-text>address:first-child::after{
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/* 악세사리 설명 */
+main>.main-section{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+main>.main-section>.acc{
+    padding: 40px 1%;
+}
+main>.main-section>.acc>.acc-sub>.rightimg{
+    float: right;
+    width: 48%;
+}
+
+main>.main-section>.acc>.acc-sub>.leftimg{
+    float: left;
+    width: 48%;
+}
+
+main>.main-section>.acc>.acc-sub>.acc-img>img{
+    max-width: 100%;
+}
+main>.main-section>.acc>.acc-sub>.right{
+    float: right;
+    width: 48%;
+    padding-right: 2%;
+    text-align: right;
+ 
+}
+main>.main-section>.acc>.acc-sub>.left{
+    float: left;
+    width: 48%;
+    padding-left: 2%;
+ 
+}
+
+main>.main-section>.acc>.acc-sub>.acc-text>h3{
+    position: relative;
+    color: #834e78;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    
+}
+main>.main-section>.acc>.acc-sub>.acc-text>h3::after{
+    position: absolute;
+    right: 0px;
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: #ccc;
+    content: "";
+    margin: 20px 0 30px;
+} 
+main>.main-section>.acc>.acc-sub>.left>h3::after{
+    left: 0;
+}
+
+main>.main-section>.acc>.acc-sub>.acc-text>.bold{
+    font-weight: 700;
+}
+main>.main-section>.acc>.acc-sub>.acc-text>p>span{
+    display: block;
+    margin: 20px 0;
+    color: #111;
+    font-weight: 700;
+}
+
+
+
+/* 반응형 */
+
+@media screen and (max-width: 1199px){
+    main>.main-section{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 800px){
+    main>.main-section>.acc>.acc-sub>.acc-img{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    main>.main-section>.acc>.acc-sub>.acc-text{
+        float: none;
+        width: 100%;
+    }    
+    main>.main-section>.acc>.acc-sub>.right{
+        text-align: left;
+        padding-right: 0;
+        padding-left: 2%;
+    }
+    main>.main-section>.acc>.acc-sub>.right>h3::after{
+        left: 0;
+    }
+}
+
+
+@media screen and (max-width: 640px){
+    main>.main-section>.acc{
+        padding: 30px 1%;
+    }
+
+    main>.main-section>.acc>.acc-sub>.acc-text>h3{
+        font-size: 18px;
+        margin-bottom: 30px;
+
+    }
+    main>.main-section>.acc>.acc-sub>.acc-text>h3::after{
+        width: 30px;
+        margin: 15px 0 25px;
+    }
+    main>.main-section>.acc>.acc-sub>.acc-text p{
+        font-size: 14px;
+    }
+}

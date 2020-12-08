@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제 소개를 하겠습니다.</title>
+    <link rel="stylesheet" href="Contents/reset.css" />
+    <link rel="stylesheet" href="Contents/common_sun.css" />
+    <link rel="stylesheet" href="Contents/common.css" />
+    <link rel="stylesheet" href="Contents/index.css" />
+    <script src="Scripts/Site.js"></script>
+  </head>
+  <style>
+    .aboutWrap {
+      max-width: 550px;
+      width: 100%;
+      margin: 150px auto;
+    }
+    .aboutMainImg {
+      width: 90%;
+      height: 300px;
+      margin: 0 auto;
+      background-color: aqua;
+    }
+    .introduce {
+      opacity: 0;
+      transition: ease-in 0.8s;
+    }
+    .introBox {
+      margin-top: 20px;
+    }
+    .introBox li {
+      line-height: 1.8em;
+      /* color: #fff; */
+    }
+    @media all and (max-width: 550px) {
+      .aboutWrap {
+        margin: 70px auto;
+      }
+      .introduce {
+        padding-left: 2%;
+      }
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="wrapOpcityControl">
+        <div class="poL backBtnBox" onclick="clickUrl('index.html?visit=y')">
+          <div class="backBtn"></div>
+        </div>
+        <div class="aboutWrap">
+          <div class="aboutMainImg"></div>
+          <div class="introduce">
+            <div>
+              <div class="introBox">
+                <h2 class="fontAboutTitle">Profile</h2>
+                <ul>
+                  <li>선승철 / SUN, Seungcheol</li>
+                  <li>1993.11.09</li>
+                  <li>Eunpyeong-gu, Seoul, Republic of Korea</li>
+                  <li>+82 10-4424-4411</li>
+                  <li>vsoghlv@naver.com</li>
+                </ul>
+              </div>
+
+              <div class="introBox">
+                <h2 class="fontAboutTitle">Career</h2>
+                <ul>
+                  <li>2020. 02 ~ 2020. 10 더파이온</li>
+                </ul>
+              </div>
+              <div class="introBox">
+                <h2 class="fontAboutTitle">Education</h2>
+                <ul>
+                  <li>고등학교 졸업학력 검정고시</li>
+                  <li>방송통신대학교 경영학과 재학중</li>
+                  <li>
+                    이젠 아카데미 모바일 앱디자인(웹디자인) & 하이브리드앱 수료
+                  </li>
+                </ul>
+              </div>
+              <div class="introBox">
+                <h2 class="fontAboutTitle">Certificate</h2>
+                <ul>
+                  <li>GTQ 포토샵 1급</li>
+                  <li>운전면허 1종 보통</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const domWrap = document.querySelector(".wrap");
+    document.addEventListener("DOMContentLoaded", function () {
+      addBkg();
+      setTimeout(function () {
+        document.querySelector(".introduce").style.opacity = "1";
+      }, 2100);
+    });
+  </script>
+</html>

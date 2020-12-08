@@ -1,200 +1,767 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1" />	
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style_m.css" media="only screen and (max-width:480px)">
-    <link rel="stylesheet" href="css/animation.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <script src="js/clock.js"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/function.js"></script>
-    <title>선승철 프로필 사이트</title>
-</head>
-<body onload="printClock()">
-    <header>
-        <nav>
-            <ul class="gnb clearfix">
-                <li class="on"><a href="javascript:void(0)">MAIN</a></li>
-                <li><a href="javascript:void(0)">ABOUT</a></li>
-                <li><a href="javascript:void(0)">PORTFOLIO</a></li>
-                <li><a href="javascript:void(0)">ART</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="cont cont1">
-            <h1>선승철</h1>
-            <div class="main-paint">
-                <img class="paint1" src="images/paint1.png" alt="사각형 세개와 삼각형 하나">
-                <img class="paint2" src="images/paint2.png" alt="원 하나와 삼각형 두개, 사각형 하나">
-                <img class="paint3" src="images/paint3-1.png" alt="삼각형 하나와 사각형 하나">
-                <img class="paint4" src="images/paint4.png" alt="사각형 하나와 삼각형 하나, 원 하나">
-            </div>
-        </section>
-        <section class="cont cont2">
-            <h2>ABOUT</h2>
-            <div class="photo">
-                <!-- <h3>선승철</h3> -->
-                <img class="squre1" src="images/squre.jpg" alt="보라색 사각형">
-                <img class="squre2" src="images/squre2.jpg" alt="녹색 사각형">
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선승철의 포트폴리오 입니다.</title>
+    <link rel="stylesheet" href="Contents/reset.css" />
+    <link rel="stylesheet" href="Contents/common_sun.css" />
+    <link rel="stylesheet" href="Contents/common.css" />
+    <link rel="stylesheet" href="Contents/index.css" />
+    <!--[if IE]> <script type=text/javascript> alert("COCOSOFT 홈페이지는 [Internet Explorer 7]를 지원하지 않습니다. \n\n안전하고 쾌적한 인터넷 환경을 위해 상위 버전의 브라우저를 사용해주세요."); </script> <![endif]-->
+    <script src="Scripts/Site.js"></script>
+  </head>
+  <style>
+    .exTitle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 40px;
+      color: #e4cfea;
+      line-height: 1.5em;
+      letter-spacing: 2px;
+    }
+    .centerBelt {
+      position: fixed;
+      width: 100%;
+      top: 56.7%;
+      transform: translateY(-50%);
+      background-color: #e4cfea;
+      height: 0px;
+      z-index: -1;
+      transition: ease-in-out 0.8s;
+    }
+    .gnbMenuM {
+      position: absolute;
+      top: 50px;
+      right: 3%;
+      height: 0;
+      transition: ease-in-out 0.3s;
+      z-index: 10;
+    }
+    .gnbMenuM li {
+      margin: 7px 0;
+      padding: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #599bad;
+      transition: ease-in 0.3s;
+      background-color: #e4cfea;
+    }
+    .gnbMenuM li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .gnbMenuM li:hover {
+      background-color: #599bad;
+      color: #e4cfea;
+    }
+  </style>
+  <body>
+    <div class="wrapBkg"></div>
+    <div class="exWrap displayN">
+      <span
+        style="
+          position: fixed;
+          top: 2%;
+          left: 2%;
+          color: #e3e89c;
+          font-size: 80px;
+        "
+        >:(</span
+      >
+      <p class="exTitle">
+        이 페이지는 익스플로러를 지원하지 않습니다. <br />
+        크롬 등 다른 브라우저를 사용해주시기 바랍니다.
+      </p>
+    </div>
+    <div class="wrap">
+      <!-- <h1 id="h1Text"></h1> -->
+      <div class="wrapOpcityControl" style="height: 100%">
+        <div class="poR">
+          <div
+            class="hamburger displayN"
+            id="hamburger-6"
+            onclick="showSubMenu(this)"
+          >
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
 
-            </div>
-            <div class="profile">
-                
-                <div class="prfofile-sub">
-                    <h4 class="wow fadeInUp" data-wow-delay="150ms">Profile</h4>
-                    <p class="wow fadeInUp" data-wow-delay="250ms">선승철 / SUN, Seungcheol</p>
-                    <p class="wow fadeInUp" data-wow-delay="300ms">1993.11.09.</p>
-                    <p class="wow fadeInUp" data-wow-delay="350ms">Eunpyeong-gu, Seoul, Republic of Korea</p>
-                    <p class="wow fadeInUp" data-wow-delay="400ms">+82 10-4424-4411</p>
-                    <p class="wow fadeInUp" data-wow-delay="450ms">vsoghlv@naver.com</p>
-                    <br>
-                    <p class="wow fadeInUp" data-wow-delay="500ms">고등학교 졸업 학력 검정고시</p>
-                    <p class="wow fadeInUp" data-wow-delay="550ms">이젠 아카데미 모바일 앱디자인(웹디자인) & 하이브리드앱 수료</p>
+          <ul class="clearfix gnbMenuM displayN">
+            <li><span></span><a href="#">GitHub</a></li>
+            <li>
+              <span></span>
+              <!-- <a
+                onclick="portfolioChange('.portfolioBoxWorkWrap','.portfolioBoxToyWrap','portfolioBoxToy')"
+                >Sun's Portfolio</a -->
+              <a href="javascript:void(0)">Sun's Portfolio</a>
+            </li>
+            <li>
+              <span></span><a onclick="clickUrlIndex('about.html')">About</a>
+            </li>
+          </ul>
+        </div>
+        <div class="centerBelt"></div>
+        <div id="gnb" style="opacity: 1">
+          <div class="welcomeText"></div>
+          <ul class="clearfix gnbMenu">
+            <li><span></span><a href="#">GitHub</a></li>
+            <li>
+              <span></span>
+              <!-- <a
+                onclick="portfolioChange('.portfolioBoxWorkWrap','.portfolioBoxToyWrap','portfolioBoxToy')"
+                >Sun's Portfolio</a -->
+              <a href="javascript:void(0)">Sun's Portfolio</a>
+            </li>
+            <li>
+              <span></span><a onclick="clickUrlIndex('about.html')">About</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="mainPortfolio poR"
+          style="
+            max-height: 500px;
+            height: 100%;
+            margin: 0 auto;
+            top: 57%;
+            transform: translateY(-50%);
+          "
+        >
+          <div class="mainControl" style="opacity: 0">
+            <button
+              class="prevBtn slideControlBtn"
+              style="display: none"
+              onclick="slidePrevBtn()"
+            >
+              이전
+            </button>
+            <button class="nextBtn slideControlBtn" onclick="slideNextBtn()">
+              다음
+            </button>
+            <div class="poR clearfix">
+              <div class="clearfix portfolioBoxWrap">
+                <div class="portNumBox clearfix">
+                  <div
+                    class="portNumTenth portNumStyle flL"
+                    style="transition: all 0.6s"
+                  >
+                    <p>0</p>
+                  </div>
+                  <div
+                    class="portNum portNumStyle flL"
+                    style="transition: all 0.6s; transition-delay: 0.8s"
+                  ></div>
                 </div>
-                <br>
-                <div class="license">
-                    <h4 class="wow fadeInUp" data-wow-delay="600ms">License</h4>
-                    <p class="wow fadeInUp" data-wow-delay="650ms">GTQ 포토샵 1급</p>
-                    <p class="wow fadeInUp" data-wow-delay="700ms">운전면허 1종 보통</p>
-                    <br>
-                    <p class="wow fadeInUp" data-wow-delay="750ms">학원 수료 후 스터디, 유튜브 그리고 책을 구매하여 실력을 키우기 위해 더욱 노력하고 있습니다. <br>
-                    답이 나오지 않으면 답이 나올 때까지 밤을 새워서라도 찾아내는 성격입니다. <br>
-                    아직은 미숙한 점이 없지 않겠으나 항상 겸허한 자세로 업무를 숙지하고 부단히 배워나가며  <br>
-                    구성원들과 원만한 관계를 만들어 나갈 자신이 있습니다.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="cont cont3 clearfix">
-            <h2>PORTFOLIO</h2>
-            <div class="clearfix">
-            <div class="port">
-                    <div class="portfolio port-1">
-                    <div class="img">
-                        <img src="images/clean-aid.jpg" alt="크린에이드 포트폴리오"> 
-                        <div class="port-text">
-                            <a href="https://sunseungcheol.github.io/Sun_portfolio2/index.html" target="_blank">
-                            <p>Main-page, 다양한 유형의 슬라이드</p>
-                            <div class="heading">
-                            <h4><span> 크린에이드</span></h4>
-                            </div>
+                <div class="portSlideBox">
+                  <div class="portfolioBoxWorkWrap">
+                    <div
+                      class="poR portfolioBox portfolioBoxWork"
+                      style="width: 100%"
+                    >
+                      <div
+                        class="portImg"
+                        style="
+                          background-image: url(img/thePion/pionWebMain.png);
+                        "
+                      >
+                        <!-- <p class="portImgText">The Pion</p> -->
+                      </div>
+                      <div class="portTextBox">
+                        <h2 class="portTitleText">ThePion</h2>
+                        <p class="portInfoText">
+                          스타트업 입사후 기획단계부터 참여하여 제작한
+                          페이지입니다. .NET을 사용하여 제작하였으며 모바일과
+                          웹페이지를 따로 제작하였습니다. <br />
+                          다음, 국토부, KB시세 API등을 사용하였으며 본인의
+                          집주소를 검색 후 페이지에 등록 시 은행권에서 등록한
+                          담보에 맞는 대출금을 입찰하는 서비스 입니다.
+                        </p>
+                        <div class="mainPortSubBox">
+                          <div class="clearfix webBtnBox">
+                            <a
+                              class="btn btnL btn_white flR"
+                              target="_blank"
+                              href="https://www.thepion.co.kr:444/"
+                            >
+                              사이트 바로가기
                             </a>
+                            <button
+                              type="button"
+                              class="btn btnL btn_white flR"
+                              style="margin-right: 10px"
+                              onclick="clickUrlIndex('Portfolio/thePion.html')"
+                            >
+                              상세페이지
+                            </button>
+                          </div>
+                          <ul class="fontTitleSubIndex clearfix">
+                            <li>2020.02~06</li>
+                            <li>.NET</li>
+                            <li>C#</li>
+                            <li>Jquery</li>
+                            <li>디자인</li>
+                            <li>모바일, 웹</li>
+                          </ul>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="port">
-                <div class="portfolio port-2">
-                    <div class="img">
-                        <img src="images/bslense.jpg" alt="bslense 포트폴리오">
-                        <div class="port-text">
-                            <a href="https://sunseungcheol.github.io/Sun_portfolio_1/" target="_blank">
-                            <p>
-                            반응형, 서브페이지 모두 구현, css 구조화</p>
-                            <div class="heading">
-                                <h4><span>BS-lense</span></h4>
-                            </div>
+                      </div>
+                      <div
+                        class="mobileBtnBox mrT10 displayN"
+                        style="width: 100%"
+                      >
+                        <a
+                          class="btn btnL btn_white flR"
+                          target="_blank"
+                          href="https://www.thepion.co.kr:444/"
+                          style="
+                            display: inline-block;
+                            width: 47.5%;
+                            margin-left: 2.5%;
+                          "
+                        >
+                          사이트 바로가기
                         </a>
-                        </div>
+                        <button
+                          type="button"
+                          class="btn btnL btn_white flR"
+                          onclick="clickUrlIndex('Portfolio/thePion.html')"
+                          style="
+                            display: inline-block;
+                            width: 47.5%;
+                            margin-right: 2.5%;
+                          "
+                        >
+                          상세페이지
+                        </button>
+                      </div>
                     </div>
-               </div>
-            </div>
-            <div class="port">
-                <div class="portfolio port-3">
-                    <div class="img">
-                        <img src="images/cats.jpg" alt="고양이 원페이지 포트폴리오">
-                        <div class="port-text">                        
-                            <a href="https://sunseungcheol.github.io/Sun_portfolio_onepage/" target="_blank">
-                            <p>
-                                원페이지, 디자인위주
-                            </p>
-                            <div class="heading">
-                                <h4><span>고양이 원페이지</span></h4>
-                            </div>
+                    <div
+                      class="poR portfolioBox portfolioBoxWork"
+                      style="width: 100%"
+                    >
+                      <div
+                        class="portImg"
+                        style="
+                          background-image: url(img/pinmany/pimmanyWebMain.png);
+                        "
+                      >
+                        <!-- <p class="portImgText">The Pion</p> -->
+                      </div>
+                      <div class="portTextBox">
+                        <h2 class="portTitleText">Pinmany</h2>
+                        <p class="portInfoText">
+                          입사 후 2번째로 진행했던 프로젝트입니다. 약 2주의
+                          기간동안 제작하였으며 .NET을 이용해 제작하였습니다.
+                          반응형으로 제작하였습니다. <br />
+                          상품권 판매 및 구매가 가능한 사이트입니다.
+                        </p>
+                        <div class="mainPortSubBox">
+                          <div class="clearfix webBtnBox">
+                            <a
+                              class="btn btnL btn_white flR"
+                              href="https://www.pinmany.com:446/"
+                              target="_blank"
+                            >
+                              사이트 바로가기
                             </a>
+                            <button
+                              type="button"
+                              class="btn btnL btn_white flR"
+                              style="margin-right: 10px"
+                              onclick="clickUrlIndex('Portfolio/pinmany.html')"
+                            >
+                              상세페이지
+                            </button>
+                          </div>
+                          <ul class="fontTitleSubIndex clearfix">
+                            <li>2020.08</li>
+                            <li>.NET</li>
+                            <li>C#</li>
+                            <li>Jquery</li>
+                            <li>디자인</li>
+                            <li>반응형</li>
+                          </ul>
                         </div>
+                      </div>
+                      <div
+                        class="mobileBtnBox mrT10 displayN"
+                        style="width: 100%"
+                      >
+                        <a
+                          class="btn btnL btn_white flR"
+                          target="_blank"
+                          href="https://www.pinmany.com:446/"
+                          style="
+                            display: inline-block;
+                            width: 47.5%;
+                            margin-left: 2.5%;
+                          "
+                        >
+                          사이트 바로가기
+                        </a>
+                        <button
+                          type="button"
+                          class="btn btnL btn_white flR"
+                          onclick="clickUrlIndex('Portfolio/pinmany.html')"
+                          style="
+                            display: inline-block;
+                            width: 47.5%;
+                            margin-right: 2.5%;
+                          "
+                        >
+                          상세페이지
+                        </button>
+                      </div>
                     </div>
-                </div>
-            </div>
-             
-            <div class="port">
-                <div class="portfolio port-4">
-                    <div class="img">
-                        <img src="images/badboy.jpg" alt="badboy 리뉴얼페이지">
-                        <div class="port-text">                        
-                            <a href="https://sunseungcheol.github.io/Sun_portfolio_3/" target="_blank">
-                            <p>
-                                쇼핑몰 리뉴얼 페이지
-                            </p>
-                            <div class="heading">
-                                <h4><span>BadBoy</span></h4>
-                            </div>
+
+                    <div
+                      class="poR portfolioBox portfolioBoxWork"
+                      style="width: 100%"
+                    >
+                      <div
+                        class="portImg"
+                        style="
+                          background-image: url(img/bs/bsWebMain.png);
+                          background-size: 100%;
+                        "
+                      >
+                        <!-- <p class="portImgText">The Pion</p> -->
+                      </div>
+                      <div class="portTextBox">
+                        <h2 class="portTitleText">B.S</h2>
+                        <p class="portInfoText">
+                          학원 수료 후 포트폴리오용으로 제작했던 사이트 입니다.
+                          사이즈에 반응해 유동적으로 변화하며 서브페이지 까지
+                          전부 구현되어있습니다.
+                        </p>
+                        <div class="mainPortSubBox">
+                          <div class="clearfix webBtnBox">
+                            <a
+                              class="btn btnL btn_white flR"
+                              href="Portfolio/bsLense/index.html"
+                              target="_blank"
+                            >
+                              사이트 바로가기
                             </a>
+                            <button
+                              type="button"
+                              class="btn btnL btn_white flR"
+                              style="margin-right: 10px"
+                              onclick="clickUrlIndex('Portfolio/bs.html')"
+                            >
+                              상세페이지
+                            </button>
+                          </div>
+                          <ul class="fontTitleSubIndex clearfix">
+                            <li>2020.01</li>
+                            <li>Jquery</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>플러그인</li>
+                          </ul>
                         </div>
+                      </div>
+                      <div
+                        class="mobileBtnBox mrT10 displayN"
+                        style="width: 100%"
+                      >
+                        <a
+                          class="btn btnL btn_white flR"
+                          target="_blank"
+                          href="Portfolio/bsLense/index.html"
+                          style="
+                            display: inline-block;
+                            width: 47.5%;
+                            margin-left: 2.5%;
+                          "
+                        >
+                          사이트 바로가기
+                        </a>
+                        <button
+                          type="button"
+                          class="btn btnL btn_white flR"
+                          onclick="clickUrlIndex('Portfolio/bs.html')"
+                          style="
+                            display: inline-block;
+                            width: 47.5%;
+                            margin-right: 2.5%;
+                          "
+                        >
+                          상세페이지
+                        </button>
+                      </div>
                     </div>
-                </div>
-            </div>
-            <div class="port">
-                <div class="portfolio port-5">
-                    <div class="img">
-                        <img src="images/flat.jpg" alt="스포츠 센터 flat icon">
-                        <div class="port-text">                        
-                
-                            <p>
-                                스포츠 센터 flat icon
-                            </p>
-                            <div class="heading">
-                                <h4><span>flat icon</span></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="port">
-                <div class="portfolio port-6">
-                    <div class="img">
-                        <img src="images/preparing.png" alt="준비중">                  
-                          <div class="port-text">                        
-                            <a href="javascript:void(0)">
-                            <p>
-                               준비중입니다.
-                            </p>
-                            <div class="heading">
-                                <h4><span>준비중</span></h4>
-                            </div>
+                    <div
+                      class="poR portfolioBox portfolioBoxWork"
+                      style="width: 100%"
+                    >
+                      <div
+                        class="portImg"
+                        style="
+                          background-image: url(img/creanaid/creanaidMain.png);
+                          background-size: 100%;
+                        "
+                      >
+                        <!-- <p class="portImgText">The Pion</p> -->
+                      </div>
+                      <div class="portTextBox">
+                        <h2 class="portTitleText">크린에이드</h2>
+                        <p class="portInfoText">
+                          학원 수료 후 포트폴리오용으로 제작했던 사이트 입니다.
+                        </p>
+                        <div class="mainPortSubBox">
+                          <div class="clearfix webBtnBox">
+                            <a
+                              class="btn btnL btn_white flR"
+                              href="Portfolio/creanAid/index.html"
+                              target="_blank"
+                            >
+                              사이트 바로가기
                             </a>
+                            <button
+                              type="button"
+                              class="btn btnL btn_white flR"
+                              style="margin-right: 10px"
+                              onclick="clickUrlIndex('Portfolio/creanaid.html')"
+                            >
+                              상세페이지
+                            </button>
+                          </div>
+                          <ul class="fontTitleSubIndex clearfix">
+                            <li>2020.01</li>
+                            <li>Jquery</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                          </ul>
                         </div>
+                      </div>
+
+                      <div
+                        class="mobileBtnBox mrT10 displayN"
+                        style="width: 100%"
+                      >
+                        <a
+                          class="btn btnL btn_white flR"
+                          target="_blank"
+                          href="Portfolio/creanAid/index.html"
+                          style="
+                            display: inline-block;
+                            width: 47.5%;
+                            margin-left: 2.5%;
+                          "
+                        >
+                          사이트 바로가기
+                        </a>
+                        <button
+                          type="button"
+                          class="btn btnL btn_white flR"
+                          onclick="clickUrlIndex('Portfolio/creanaid.html')"
+                          style="
+                            display: inline-block;
+                            width: 47.5%;
+                            margin-right: 2.5%;
+                          "
+                        >
+                          상세페이지
+                        </button>
+                      </div>
                     </div>
+                  </div>
+                  <div class="portfolioBoxToyWrap displayN">
+                    <div
+                      class="poR portfolioBox portfolioBoxToy"
+                      style="width: 100%"
+                    >
+                      <div class="portImg">
+                        <p class="portImgText">The Piddon</p>
+                      </div>
+                      <div class="portTextBox">
+                        <h2 class="portTitleText">ThePdddion</h2>
+                        <p class="portInfoText">
+                          주며, 피가 그들의 때까지 커다란 쓸쓸한 약동하다.
+                          얼마나 못하다 속잎나고, 사랑의 사라지지 용감하고 불어
+                          내려온 사막이다. 우리 청춘의 오직 생ddd명을 청춘의
+                          유소년에게서 살 가치를 열매를 그리하였는가? 이 곳으로
+                          피에 실현에 실로 살았으며, 붙잡아 위하여서 피다.
+                          이상이 지혜는 튼튼하며, 사라지지 쓸쓸한 보라. 불어
+                          물방아 갑 원질이 가치를 인생에 끓는 주는 전인
+                          때문이다. 우리 예수는 풍부하게 간에 발휘하기 긴지라
+                          뿐이다. 온갖 구할 노년에게서 피는 그것은 약동하다.
+                          우리의 아름답고 착목한는 영락과 웅대한 같지 품에
+                          소리다.이것은 무한한 위하여서. 생의 만천하의 인생의
+                          교향악이다.
+                        </p>
+
+                        <ul class="fontTitleSubIndex clearfix">
+                          <li>2020.02~06</li>
+                          <li>.NET</li>
+                          <li>C#</li>
+                          <li>Jquery</li>
+                          <li>디자인</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="poR portfolioBox portfolioBoxToy"
+                      style="width: 100%"
+                    >
+                      <div class="portImg"></div>
+                      <div class="portTextBox">
+                        <h2 class="portTitleText">포트폴리오 첫번째</h2>
+                        <p class="portInfoText">
+                          주며, 피가 그들의 때까지 커다란 쓸쓸한 약동하다.
+                          얼마나 못하다 속잎나고, 사랑의 사라지지 용감하고 불어
+                          내려온 사막이다. 우리 청춘의 오직 생명을 청춘의
+                          유소년에게서 살 가치를 열매를 그리하였는가? 이 곳으로
+                          피에 실현에 실로 살았으며, 붙잡아 위하여서 피다.
+                          이상이 지혜는 튼튼하며, 사라지지 쓸쓸한 보라. 불어
+                          물방아 갑 원질이 가치를 인생에 끓는 주는 전인
+                          때문이다. 우리 예수는 풍부하게 간에 발휘하기 긴지라
+                          뿐이다. 온갖 구할 노년에게서 피는 그것은 약동하다.
+                          우리의 아름답고 착목한는 영락과 웅대한 같지 품에
+                          소리다.이것은 무한한 위하여서. 생의 만천하의 인생의
+                          교향악이다.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="poR portfolioBox portfolioBoxToy"
+                      style="width: 100%"
+                    >
+                      <div class="portImg"></div>
+                      <div class="portTextBox">
+                        <h2 class="portTitleText">포트폴리오 첫번째</h2>
+                        <p class="portInfoText">
+                          주며, 피가 그들의 때까지 커다란 쓸쓸한 약동하다.
+                          얼마나 못하다 속잎나고, 사랑의 사라지지 용감하고 불어
+                          내려온 사막이다. 우리 청춘의 오직 생명을 청춘의
+                          유소년에게서 살 가치를 열매를 그리하였는가? 이 곳으로
+                          피에 실현에 실로 살았으며, 붙잡아 위하여서 피다.
+                          이상이 지혜는 튼튼하며, 사라지지 쓸쓸한 보라. 불어
+                          물방아 갑 원질이 가치를 인생에 끓는 주는 전인
+                          때문이다. 우리 예수는 풍부하게 간에 발휘하기 긴지라
+                          뿐이다. 온갖 구할 노년에게서 피는 그것은 약동하다.
+                          우리의 아름답고 착목한는 영락과 웅대한 같지 품에
+                          소리다.이것은 무한한 위하여서. 생의 만천하의 인생의
+                          교향악이다.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="poR portfolioBox portfolioBoxToy"
+                      style="width: 100%"
+                    >
+                      <div class="portImg"></div>
+                      <div class="portTextBox">
+                        <h2 class="portTitleText">포트폴리오 첫번째</h2>
+                        <p class="portInfoText">
+                          주며, 피가 그들의 때까지 커다란 쓸쓸한 약동하다.
+                          얼마나 못하다 속잎나고, 사랑의 사라지지 용감하고 불어
+                          내려온 사막이다. 우리 청춘의 오직 생명을 청춘의
+                          유소년에게서 살 가치를 열매를 그리하였는가? 이 곳으로
+                          피에 실현에 실로 살았으며, 붙잡아 위하여서 피다.
+                          이상이 지혜는 튼튼하며, 사라지지 쓸쓸한 보라. 불어
+                          물방아 갑 원질이 가치를 인생에 끓는 주는 전인
+                          때문이다. 우리 예수는 풍부하게 간에 발휘하기 긴지라
+                          뿐이다. 온갖 구할 노년에게서 피는 그것은 약동하다.
+                          우리의 아름답고 착목한는 영락과 웅대한 같지 품에
+                          소리다.이것은 무한한 위하여서. 생의 만천하의 인생의
+                          교향악이다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        </section>
-        <section class="cont cont4">
-            <h2>ART</h2>
-           <div class="arts clearfix">
-               <img src="images/art/art-1.jpg" alt="주방용품 드로잉">
-               <img src="images/art/art-2.jpg" alt="도시 드로잉">
-               <img src="images/art/art-3.jpg" alt="골목 드로잉">
-               <img src="images/art/art-4.jpg" alt="도시 드로잉">
-               <img src="images/art/art-5.jpg" alt="한옥 드로잉">
-               <img src="images/art/art-6.jpg" alt="실내 드로잉">
-               <img src="images/art/art-7.jpg" alt="도시 드로잉">
-               <img src="images/art/art-8.jpg" alt="공사현장 드로잉">
-               <img src="images/art/art-9.jpg" alt="공사현장 드로잉">
-               <img src="images/art/art-10.jpg" alt="실내 드로잉">
-               <img src="images/art/art-11.jpg" alt="숲 드로잉">
-               <img src="images/art/art-12.jpg" alt="도시 드로잉">
-           </div>
-        </section>
-    </main>
-    <footer>
-        <div id="clock">
-        </div>
-    </footer>
-    </body>
+      </div>
+    </div>
+  </body>
 </html>
+
+<script>
+  var portSlideBox = document.querySelector(".portSlideBox");
+  var openText = "Sun's Portfolio";
+  var prevBtn = document.querySelector(".prevBtn");
+  var nextBtn = document.querySelector(".nextBtn");
+  var isSubMenuOpen = false;
+  var portfolioBoxWidth =
+    Number(
+      window
+        .getComputedStyle(document.querySelector(".portfolioBox"))
+        .width.replace("px", "")
+    ) + 100; //마진값 100더할것
+  var portfolioBoxLength = document.getElementsByClassName("portfolioBox")
+    .length;
+  //const portfolioBoxLength = document.getElementsByClassName("portfolioBox").length;
+  var portfolioBoxWrapWidth = portfolioBoxLength * portfolioBoxWidth;
+  var i = 0;
+  var slideIndex = 0;
+
+  //도큐멘트 레디
+  document.addEventListener("DOMContentLoaded", function () {
+    if (isIEVisit()) {
+      //익스로 접속한 경우
+      document.querySelector(".wrap").style.display = "none";
+      document.querySelector(".exWrap").style.display = "block";
+    } else {
+      if (getParam("visit") === "y") {
+        addBkgIndex();
+        if (getParam("click") != null) {
+          var getClick = getParam("click");
+
+          switch (getClick) {
+            case "pion":
+              slideIndex = 0;
+              moveSlide();
+              break;
+
+            case "pinmany":
+              slideIndex = 1;
+              prevBtn.style.display = "block";
+              moveSlide();
+              break;
+            case "bs":
+              slideIndex = 2;
+              prevBtn.style.display = "block";
+              moveSlide();
+              break;
+            case "creanaid":
+              slideIndex = 3;
+              prevBtn.style.display = "block";
+
+              nextBtn.style.display = "none";
+              moveSlide();
+              break;
+          }
+        }
+      } else {
+        writeText();
+      }
+    }
+
+    document.querySelector(".portSlideBox").style.width =
+      portfolioBoxWrapWidth + "px";
+    portfolioLengthText("portfolioBoxWork");
+  });
+
+  //윈도우 리사이즈
+  window.addEventListener("resize", function () {
+    setTimeout(function () {
+      portfolioBoxWidth =
+        Number(
+          window
+            .getComputedStyle(document.querySelector(".portfolioBox"))
+            .width.replace("px", "")
+        ) + 100; //마진값 100더할것
+      portfolioBoxWrapWidth = portfolioBoxLength * portfolioBoxWidth;
+      document.querySelector(".portSlideBox").style.width =
+        portfolioBoxWrapWidth + "px";
+      moveSlide();
+    }, 300);
+    if (window.innerWidth < 767) {
+      document.querySelector(".hamburger").classList.remove("is-active");
+      document.querySelector(".gnbMenuM").style.display = "none";
+      isSubMenuOpen = false;
+    }
+    //console.log("resize!!");
+    //console.log(portfolioBoxWidth + "/" + portfolioBoxWrapWidth + "/");
+  });
+
+  //메인 로딩시 글자쓰기
+  function writeText() {
+    var doorTextDom = document.querySelector(".welcomeText");
+    var doorTextControl = document.querySelector(".wrapBkg");
+    document.querySelector(".wrapOpcityControl").style.opacity = "1";
+    if (i < openText.length) {
+      doorTextDom.innerHTML += openText[i];
+      i++;
+      setTimeout(writeText, 100);
+    }
+    if (i === openText.length) {
+      setTimeout(function () {
+        addBkgIndex();
+      }, 1000);
+    }
+  }
+
+  //슬라이드
+
+  function moveSlide() {
+    portSlideBox.style.left = "-" + portfolioBoxWidth * slideIndex + "px";
+    //console.log(document.querySelector(".portNum"));
+    document.querySelector(".portNum").style.transform =
+      "translateY(-" + 80 * slideIndex + "px)";
+  }
+  function slideNextBtn() {
+    if (slideIndex < portfolioBoxLength - 1) {
+      slideIndex++;
+      prevBtn.style.display = "block";
+    } else {
+      slideIndex = 0;
+    }
+    if (slideIndex === portfolioBoxLength - 1) {
+      nextBtn.style.display = "none";
+    }
+    //console.log(slideIndex + "/" + portfolioBoxWidth * slideIndex);
+    moveSlide();
+  }
+  function slidePrevBtn() {
+    //console.log(slideIndex + "/" + portfolioBoxWidth * slideIndex);
+
+    if (slideIndex > 0) {
+      slideIndex--;
+      nextBtn.style.display = "block";
+    } else {
+      slideIndex = portfolioBoxLength - 1;
+    }
+    if (slideIndex === 0) {
+      prevBtn.style.display = "none";
+    }
+    moveSlide();
+  }
+
+  //포트폴리오 개수
+
+  function portfolioLengthText(dom) {
+    document.querySelector(".portNum").innerHTML = "";
+    portfolioBoxLength = document.getElementsByClassName(dom).length;
+    //console.log(dom);
+    //console.log(portfolioBoxLength);
+    var tag = "";
+    for (let i = 1; i <= portfolioBoxLength; i++) {
+      tag += "<p>" + i + "</p>";
+    }
+    document.querySelector(".portNum").innerHTML = tag;
+  }
+
+  function portfolioChange(disNDom, disBdom, domLength) {
+    document.querySelector(disNDom).style.display = "none";
+    document.querySelector(disBdom).style.display = "block";
+    portfolioLengthText(domLength);
+    slideIndex = 0;
+    slideNextBtn(nextBtn);
+    slidePrevBtn(prevBtn);
+    moveSlide();
+  }
+  //햄버거메뉴
+  function showSubMenu(dom) {
+    if (isSubMenuOpen) {
+      dom.classList.remove("is-active");
+      document.querySelector(".gnbMenuM").style.display = "none";
+      isSubMenuOpen = false;
+    } else {
+      dom.classList.add("is-active");
+      document.querySelector(".gnbMenuM").style.display = "block";
+      isSubMenuOpen = true;
+    }
+  }
+</script>

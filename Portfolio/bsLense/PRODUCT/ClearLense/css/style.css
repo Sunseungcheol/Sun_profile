@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+
+/*  main*/
+
+
+/* 제품정보부분 */
+main>.main-section{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+main>.main-section>.item>.itemsub{
+    padding: 40px 0;
+    
+}
+main>.main-section>.item>.itemsub>.item-img{
+    float: left;
+    width: 33.33%;
+    margin-top: 50px;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-sizing: border-box;
+}
+main>.main-section>.item>.itemsub>.item-img>img{}
+
+
+main>.main-section>.item>.itemsub>.item-table{
+    float: left;
+    width: 64%;
+    margin-left: 2%;
+    
+}
+main>.main-section>.item>.itemsub>.item-table .table-width{
+    width: 25%;
+}
+main>.main-section>.item>.itemsub>.item-table>.table-text{
+    font-size: 30px;
+    color: #834e78;
+    font-weight: 500;
+}
+main>.main-section>.item>.itemsub>.item-table>table{
+    width: 100%;
+    text-align: center;
+    border-bottom:1px solid #444;
+    box-sizing: border-box;
+}
+main>.main-section>.item>.itemsub>.item-table>table th{
+    color: #333;
+    padding: 10px 8px;
+    border-top:2px solid #111;
+    border-bottom: 3px solid #444;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+main>.main-section>.item>.itemsub>.item-table>table tr{
+  
+}
+main>.main-section>.item>.itemsub>.item-table>table tr td{
+    padding: 20px 8px;
+}
+
+
+
+
+
+
+
+
+
+/* 반응형 */
+@media screen and (max-width: 1199px){
+
+main>.main-section{
+    width: 100%;
+}
+
+}
+
+@media (max-width: 640px){
+
+main>.main-section>.item{
+    padding: 30px 0;
+}
+main>.main-section>.item>.itemsub{
+    padding: 20px 0;
+}
+main>.main-section>.item>.itemsub>.item-img{
+    width: 100%;
+   margin: 0 10px;
+   
+}
+main>.main-section>.item>.itemsub>.item-table{
+    width: 100%;
+    clear: both;
+}
+main>.main-section>.item>.itemsub>.item-table>.table-text{
+    font-size: 18px;
+}
+
+main>.main-section>.item>.itemsub>.item-table>p{
+    font-size: 18px;
+}
+main>.main-section>.item>.itemsub>.item-table>table tr td{
+    padding: 10px 0;
+}
+
+}

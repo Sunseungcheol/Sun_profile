@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+
+.main-section{
+
+    min-height: 400px;
+    text-align: center;
+}
+.main-section>h2{
+    font-size: 40px;
+    font-weight: 500;
+    color: #141414;
+    margin: 50px auto;
+}
+.main-section>.sub-img{
+    width: 100%;
+    position: relative;
+}
+.main-section>.sub-img>img{
+    display: block; 
+    width: 100%;
+    height: 450px;
+}
+
+.main-section>.sub-img>.img-text>p>img{
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    margin-left: -65px;
+}
+
+.main-section>.sub-img>.img-text>h3{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index:10;    
+    color: #fff;
+    font-size: 40px;
+    line-height: 450px;
+    letter-spacing: 5px;
+}
+
+/* 아이템부분 */
+main>.main-section>.item{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+main>.main-section>.item>h3{
+    color: #834e78;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 20px 0;
+    line-height: 1.4;
+    text-align: center;
+}
+main>.main-section>.item>h3::before,main>.main-section>.item>h3::after{
+    display: block;
+    margin: 0 auto;
+    content: "";
+    background: url(../images/tear_tit_bg.png);
+}
+main>.main-section>.item>h3::before{
+    width: 41px;
+    height: 28px;
+    background-position: 0 0;
+}
+main>.main-section>.item>h3::after{
+    width: 73px;
+    height: 36px;
+    background-position: 0 -28px;
+}
+main>.main-section>.item>.item1{
+    width: 100%;
+    padding: 20px 0;
+
+}
+main>.main-section>.item>.item1>img{
+    max-width: 100%;
+ 
+}
+main>.main-section>.item h4{
+    color: #333;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+/* Production 부분 */
+main>.main-section>.item>.item2>.itemstep>ul>li{
+    position: relative;
+    float: left;
+    width: 16.66%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+main>.main-section>.item>.item2>.itemstep>ul>li::after{
+    content: "";
+    background-image: url(../images/c_right.png);
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    position: absolute;
+    right: -11px;
+    z-index: 2;
+    top: 22px;
+}
+main>.main-section>.item>.item2>.itemstep>ul>li:last-child::after{
+    background:none;
+}
+main>.main-section>.item>.item2>.itemstep>ul>li>span{
+    display: block;
+    width: 100%;
+    background-color: #eee;
+    padding: 10px 0;
+}
+main>.main-section>.item>.item2>.itemstep>ul.right>li{
+    float: right;
+
+}
+main>.main-section>.item>.item2>.itemstep>ul.right>li::after{
+    background-image: url(../images/c_left.png);
+}
+main>.main-section>.item>.item2>.itemstep>ul.right>li:first-child::after{
+    top: -11px;
+    left: 50%;
+    margin-left: -11px;
+    background-image: url(../images/c_down.png);
+}
+main>.main-section>.item>.item2>.item2-1{
+    width: 100%;
+    padding: 60px 0;
+}
+
+/* 메인푸터 */
+main>.main-footer{
+   
+   
+}
+main>.main-footer>.lense{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+main>.main-footer>.lense>.lense-img{
+    margin-top: 30px;
+}
+
+/* 반응형 */
+@media screen and (max-width: 1199px){
+
+main>.main-section>.main-text>h2{
+    font-size: 30px;
+}
+main>.main-section>.main-text>p{
+    font-size: 18px;
+}
+main>.main-section>.sub-img{
+    height: 300px;
+}
+main>.main-section>.sub-img>img{
+    height: 300px;
+}
+main>.main-section>.sub-img>.img-text>h3{
+    font-size: 30px;
+    line-height: 1.3;
+    letter-spacing: 4px;
+}
+main>.main-section>.sub-img>.img-text>p>img{
+    top: 25%;
+    
+    margin-left: -40px;
+    width: 80px;
+}
+.main-footer{
+    width: 100%;
+}
+}
+
+@media (max-width:800px){
+    main>.main-section>.item>.item2>.itemstep>ul.itemstep-sub>li{
+        float: none;
+        width: 80%;
+        margin: 0 auto;
+
+    }
+    main>.main-section>.item>.item2>.itemstep>ul.itemstep-sub>li::after{
+        background: url(../images/c_down.png);
+        right: 50%;
+        margin-right: -11px;
+        top: 44px;
+    }
+    main>.main-footer>.lense>p{
+        margin: 0 2%;
+    }
+}
+
+@media (max-width: 640px){
+
+
+main>.main-section>h2{
+    font-size: 28px;
+}
+main>.main-section>.sub-img{
+    text-align: center;
+    height: 100%;
+}
+main>.main-section>.sub-img>img{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+
+}
+main>.main-section>.sub-img>.img-text>h3{
+    top: 48%;
+    letter-spacing: 1px;
+    font-size: 24px;
+    line-height: 1;
+}
+
+main>.main-section>.sub-img>.img-text>p>img{
+    top: 25px;
+    left: 50%;
+    
+}
+main>.main-section>.item>h3{
+    font-size: 18px;
+    padding: 10px 0;
+}
+main>.main-section>.item>h3::before,main>.main-section>.item>h3::after{
+    background-size: 36.5px;
+}
+main>.main-section>.item>h3::before{
+    width: 20.5px;
+    height: 14px;
+    background-position: 0 0;
+}
+main>.main-section>.item>h3::after{
+    width: 36.5px;
+    height: 18px;
+    background-position: 0 -14px;
+
+}
+main>.main-section>.item h4{
+    font-size: 18px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+

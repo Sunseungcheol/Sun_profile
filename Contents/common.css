@@ -1,0 +1,220 @@
+@charset "utf-8";
+.creanaidMainImg {
+  max-width: 100%;
+  margin: 100px auto;
+}
+.backBtnBox {
+  position: fixed;
+  top: 3%;
+  left: 3%;
+  -webkit-transform: rotate(-45deg) scale(1);
+  transform: rotate(-45deg) scale(1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+}
+.backBtnBox:hover {
+  background-color: #e3e89c;
+  transform: rotate(-45deg) scale(1.2);
+}
+.backBtnBox:hover .backBtn {
+  transform: translate(-50%, -50%) rotate(360deg);
+  border-color: #e1b9ec;
+}
+.backBtn {
+  position: absolute;
+  left: 54%;
+  top: 51%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 2px solid #f1f1f1;
+  border-top: 2px solid #f1f1f1;
+}
+.portTitle {
+  color: #fff;
+  font-size: 150px;
+  font-weight: bold;
+  line-height: 1.2em;
+  text-align: left;
+}
+.fontAboutTitle {
+  margin-bottom: 10px;
+  font-family: Noto Sans KR;
+  font-size: 18px;
+  line-height: 1.5em;
+  color: #d8f1f7;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.fontTitleSub {
+  font-family: Noto Sans KR;
+  font-size: 18px;
+  line-height: 1.5em;
+  color: #d8f1f7;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.fontTitleSub li {
+  margin: 15px 0px;
+}
+.fontInfoSUb {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-family: Noto Sans KR;
+  font-size: 16px;
+  line-height: 1.8em;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.portTitleBoxWrap {
+  transition: ease-in-out 0.4s;
+}
+.projectInfoTitle {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.2em;
+  text-align: left;
+}
+.portTitleBoxWrap li {
+  float: left;
+  margin: 10px 20px 10px 10px;
+}
+.portBoxWrap {
+  margin: 100px 0;
+}
+
+/* 포폴 이미지 */
+.clickPopImg {
+  max-width: 80%;
+  margin: 150px auto;
+}
+.webMainImg {
+  max-width: 80%;
+  margin-left: 10%;
+  opacity: 0;
+  transition: all 1.3s;
+}
+.mobileMainImg {
+  position: absolute;
+  max-width: 22%;
+  left: 0;
+  bottom: -100px;
+  -webkit-filter: drop-shadow(2px 4px 6px black);
+  filter: drop-shadow(2px 4px 6px black);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.workArticle,
+.workArticleSub,
+.pageArtcle,
+.portDetailImgWrap {
+  opacity: 0;
+}
+.workArticle,
+.pageArtcle {
+  padding-top: 30px;
+  transition: ease-in 0.5s;
+}
+.workArticleSub,
+.portDetailImgWrap {
+  padding-top: 40px;
+  transition: ease-in-out 1.2s;
+}
+#columns {
+  column-width: 320px;
+  column-gap: 15px;
+  /* width: 90%; */
+  max-width: 1100px;
+  margin: 50px auto;
+}
+
+#columns .columSub {
+  background: #fefefe;
+  /* border: 2px solid #fefefe; */
+  margin: 0 2px 15px;
+  padding: 15px;
+  padding-bottom: 10px;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  column-break-inside: avoid;
+}
+
+#columns .columSub img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+}
+#columns:hover .columSub:not(:hover) {
+  opacity: 0.45;
+  transform: scale(0.98);
+}
+#columns .columSub figcaption {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+@media all and (max-width: 1200px) {
+  .portTitleBoxWrap {
+    padding-left: 40px;
+  }
+  .mobileMainImg {
+    left: 6%;
+  }
+
+  .w90M {
+    width: 90%;
+    margin: 150px auto 0;
+  }
+}
+
+@media all and (max-width: 750px) {
+  #columns {
+    column-gap: 0px;
+  }
+}
+
+@media all and (max-width: 664px) {
+  .creanaidMainImg {
+    margin: 20px auto;
+  }
+  .portTitle {
+    font-size: 70px;
+  }
+  .fontTitleSub {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  .projectInfoTitle {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .articleWrap {
+    float: none;
+    width: 90% !important;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .backBtnBox {
+    width: 30px;
+    height: 30px;
+  }
+  .backBtn {
+    width: 10px;
+    height: 10px;
+  }
+}
