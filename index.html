@@ -94,7 +94,14 @@
           </div>
 
           <ul class="clearfix gnbMenuM displayN">
-            <li><span></span><a href="#">GitHub</a></li>
+            <li>
+              <span></span
+              ><a
+                href="https://github.com/Sunseungcheol/Sun_portfolio"
+                target="_blank"
+                >GitHub</a
+              >
+            </li>
             <li>
               <span></span>
               <!-- <a
@@ -111,7 +118,14 @@
         <div id="gnb" style="opacity: 1">
           <div class="welcomeText"></div>
           <ul class="clearfix gnbMenu">
-            <li><span></span><a href="#">GitHub</a></li>
+            <li>
+              <span></span
+              ><a
+                href="https://github.com/Sunseungcheol/Sun_portfolio"
+                target="_blank"
+                >GitHub</a
+              >
+            </li>
             <li>
               <span></span>
               <!-- <a
@@ -473,7 +487,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="portfolioBoxToyWrap displayN">
+                  <!-- <div class="portfolioBoxToyWrap displayN">
                     <div
                       class="poR portfolioBox portfolioBoxToy"
                       style="width: 100%"
@@ -576,7 +590,7 @@
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -593,21 +607,28 @@
   var prevBtn = document.querySelector(".prevBtn");
   var nextBtn = document.querySelector(".nextBtn");
   var isSubMenuOpen = false;
-  var portfolioBoxWidth =
-    Number(
-      window
-        .getComputedStyle(document.querySelector(".portfolioBox"))
-        .width.replace("px", "")
-    ) + 100; //마진값 100더할것
+  let windowMargin = 100;
+  let portfolioBoxWidth = 0;
   var portfolioBoxLength = document.getElementsByClassName("portfolioBox")
     .length;
   //const portfolioBoxLength = document.getElementsByClassName("portfolioBox").length;
-  var portfolioBoxWrapWidth = portfolioBoxLength * portfolioBoxWidth;
+  let portfolioBoxWrapWidth = 0;
   var i = 0;
   var slideIndex = 0;
 
   //도큐멘트 레디
   document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth < 414) {
+      windowMargin = 0;
+    }
+    portfolioBoxWidth =
+      Number(
+        window
+          .getComputedStyle(document.querySelector(".portfolioBox"))
+          .width.replace("px", "")
+      ) + windowMargin; //마진값 100더할것
+    portfolioBoxWrapWidth = portfolioBoxLength * portfolioBoxWidth;
+    console.log(window.innerWidth);
     if (isIEVisit()) {
       //익스로 접속한 경우
       document.querySelector(".wrap").style.display = "none";
@@ -661,7 +682,7 @@
           window
             .getComputedStyle(document.querySelector(".portfolioBox"))
             .width.replace("px", "")
-        ) + 100; //마진값 100더할것
+        ) + windowMargin; //마진값 100더할것
       portfolioBoxWrapWidth = portfolioBoxLength * portfolioBoxWidth;
       document.querySelector(".portSlideBox").style.width =
         portfolioBoxWrapWidth + "px";
@@ -697,6 +718,7 @@
 
   function moveSlide() {
     portSlideBox.style.left = "-" + portfolioBoxWidth * slideIndex + "px";
+    //console.log(portfolioBoxWidth);
     //console.log(document.querySelector(".portNum"));
     document.querySelector(".portNum").style.transform =
       "translateY(-" + 80 * slideIndex + "px)";
@@ -708,6 +730,7 @@
     } else {
       slideIndex = 0;
     }
+
     if (slideIndex === portfolioBoxLength - 1) {
       nextBtn.style.display = "none";
     }

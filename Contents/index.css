@@ -383,7 +383,18 @@
   }
 }
 
-/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
-@media all and (max-width: 479px) {
-  /*스타일입력*/
+@media all and (max-width: 413px) {
+  .portfolioBoxWrap {
+    max-width: 300px;
+  }
+  .portfolioBox {
+    max-width: 300px;
+    margin: 0;
+  }
+  .portTextBox {
+    right: 3px;
+  }
+  .portTitleText {
+    font-size: 2rem;
+  }
 }
